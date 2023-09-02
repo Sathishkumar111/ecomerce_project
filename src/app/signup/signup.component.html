@@ -1,0 +1,56 @@
+<div class="account section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="login-form border p-5">
+            <div class="text-center heading">
+              <h2 class="mb-2">Sign Up</h2>
+              <p class="lead">Already have an account? <a routerLink="/login"> Login now</a></p>
+            </div>
+  
+
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                <input type="text" class="form-control" [(ngModel)]="signup.name" placeholder='Name'>
+              </div>
+      
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Email</label>
+                  <input type="text" class="form-control" [(ngModel)]="signup.email" placeholder="Email">
+                </div>
+      
+                <div class="modal-body">
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Password</label>
+                    <input type="text" class="form-control" [(ngModel)]="signup.password" placeholder="Password">
+                  </div>
+                  <div class="modal-body">
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Re-Password</label>
+                      <input type="text" class="form-control" placeholder="Re-Password">
+                    </div>
+      
+                    <div class="modal-body">
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Gender</label>
+                        <input type="text" class="form-control" [(ngModel)]="signup.gender" placeholder="Gender">
+                      </div>
+                    </div>
+      
+                    <div class="modal-footer">
+                      <!-- <button type="button" class="btn btn-outline-dark" >Close</button> -->
+      
+                      <button type="button" class="btn btn-outline-dark" (click)="regsister()">Save</button>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

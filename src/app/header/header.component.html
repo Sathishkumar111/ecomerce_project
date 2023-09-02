@@ -1,0 +1,149 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white w-100 navigation" id="navbar">
+  <div class="container">
+    <a class="navbar-brand font-weight-bold" routerLink="/">E-Shop</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar"
+      aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="main-navbar">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/home">Home </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <!-- Pages -->
+        <li class="nav-item dropdown dropdown-slide">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-delay="350"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pages
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Blog Single</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">404 Page</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </li><!-- /Pages -->
+        <!-- / Blog -->
+
+        <li class="nav-item dropdown dropdown-slide">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-delay="350"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Shop
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+            <li><a routerLink="/addproduct">Add-Product</a></li>
+            <li><a routerLink="/shop">Shop</a></li>
+            <li><a routerLink="/product">Product Details</a></li>
+            <li><a routerLink="/checkout">Checkout</a></li>
+            <li><a routerLink="/cart">Cart</a></li>
+          </ul>
+        </li><!-- / Blog -->
+
+        <!-- Account -->
+        <li class="nav-item dropdown dropdown-slide">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-delay="350"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Account.
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown5">
+            <li><a routerLink="/dashboard">Dahsboard</a></li>
+            <li><a routerLink="/order">Orders</a></li>
+            <li><a routerLink="/address">Address</a></li>
+            <li><a routerLink="/profile">Profile Details</a></li>
+            <li><a routerLink="/login">Login Page</a></li>
+            <li><a routerLink="/signup">SignUp Page</a></li>
+            <li><a routerLink="/forgot">Forgot Password</a></li>
+          </ul>
+        </li><!-- / Account -->
+      </ul>
+    </div>
+    <!-- Navbar-collapse -->
+
+    <ul class="top-menu list-inline mb-0 d-none d-lg-block" id="top-menu">
+      <li class="list-inline-item">
+        <a href="#" class="search_toggle" id="search-icon"><i class="tf-ion-android-search"></i></a>
+      </li>
+
+      <li class="dropdown cart-nav dropdown-slide list-inline-item">
+        <a href="#" class="dropdown-toggle cart-icon" data-toggle="dropdown" data-hover="dropdown">
+          <i class="tf-ion-android-cart"></i>
+        </a>
+        <div class="dropdown-menu cart-dropdown">
+          <!-- Cart Item -->
+          <div class="media">
+            <a routerLink="/product-single">
+              <img class="media-object img- mr-3" src="assets/images/cart-1.jpg" alt="image" />
+            </a>
+            <div class="media-body">
+              <h6>Ladies Bag</h6>
+              <div class="cart-price">
+                <span>1 x</span>
+                <span>1250.00</span>
+              </div>
+            </div>
+            <a href="#" class="remove"><i class="tf-ion-close"></i></a>
+          </div><!-- / Cart Item -->
+
+          <!-- Cart Item -->
+          <div class="media">
+            <a routerLink="/product-single">
+              <img class="media-object img-fluid mr-3" src="assets/images/cart-2.jpg" alt="image" />
+            </a>
+            <div class="media-body">
+              <h6>Skinny Jeans</h6>
+              <div class="cart-price">
+                <span>1 x</span>
+                <span>1250.00</span>
+              </div>
+            </div>
+            <a href="#" class="remove"><i class="tf-ion-close"></i></a>
+          </div><!-- / Cart Item -->
+
+          <div class="cart-summary">
+            <span class="h6">Total</span>
+            <span class="total-price h6">$1799.00</span>
+
+            <div class="text-center cart-buttons mt-3">
+              <a href="#" class="btn btn-small btn-transparent btn-block">View Cart</a>
+              <a href="#" class="btn btn-small btn-main btn-block">Checkout</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="list-inline-item">
+      <div *ngIf="display then thenBlock;else elseBlock">
+      </div>
+    </li>
+        <ng-template #thenBlock>
+          <div class="nav-item" ngbDropdown display="dynamic" placement="bottom-end">
+
+            <img alt="profile-image" type="button" class="rounded-circle" id="dropdownBasic1" ngbDropdownToggle
+              :src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIQAhAMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAAABgEDBQQCBwj/xABAEAABAwMCAgYIAwcCBwEAAAABAgMEAAURBiESMRMiQVFhcQcUMoGRobHRFSPwQlJigqLB4TNDJCVjkrLS8Rb/xAAYAQADAQEAAAAAAAAAAAAAAAAAAgQDAf/EAC4RAAIBAgMGBAYDAAAAAAAAAAABAgMREiExBBNBUXHRMrHB4RQiI2GBkTOh8P/aAAwDAQACEQMRAD8A+G0UUUAFFSKvhxH5shLEVlbrqzhKUjJoBuyuygc6vixJMx3o4rDjy/3W0FR+VOLGl7VY46ZWqZSS4r2YjKiSfhufkPGqZmulMtGNYILMFgbBRQCr4ch86TFfQk+JlPKjG/30XucsPQl8kDicaajp/wCqvf4DNdp0Elof8XfITJ7iB/cilqZdrlcFZlzn3B3FZx8BtXGUDnXbS5nd3tD1ml0Xcb06Ihq/09SQVHuwn/2ry/6PbkElUSVEkDuCiDSkEDG+a9NPvR1BUd9xpQ3BQsgj4UWlzDdbQtKn7R23HT91toJlwXkoHNaRxJ+I2rNPKmS261vUIgOPiU3yKHxn5861hJ0vqjqSWfwu4K2DicBCj58j7wPOuYmtUc31an/LG65rtqIdFbmoNMz7IoqeQHYx9mQ2Or7+41iUydyiE41Fii7oiiiiujhRRRQAVOKiuiHFemyWo0ZBW66oJSkd9BxtJXZ02S0SrzNTFhoyrmpZ9lA7zTdPulv0fGVbrIhL1xUMPylgHhPd5+HIeNF3ms6QtSbPa1JNweSFSZA5pz3ePd3DekNRzzznxpPF0I4xe0vFLwcFz+7+xZKkvy31vyXVuurOVLWck14aQpa0pSkqKjgADJNQnfanrSkRq32lV0cS0hak7PPAcIHYlPFsVbfOtEi3TJC9HsMkBLs9K4jOTu42okgbnkDgeNaCrXEbYPSQSXAAUn1oq4wc9mBg7eR+dU3LUU1yQVofKwcpIxzGc4P1rjfmS1OtvobW2EAcGU93IfIV26AmQqGyCgWxCsbFQeXuOYI91Zs11l58qjRxHbwMNgk4953NXvSA44niQUYwcHv7a4sbc6UDyDU5qcZBxXmgBm05qt+2o9TuCfW7ascKml9YoHhns8Ku1NpthuKLxYl9PbnBxKSnctf3x9KUwaYNKahdskvhcHSQXjh5o74/iA7/AK0jVs0S1KThLeUteK5+4v4qKZtZWFu2vtzreQu3S+s0pJyEE748u7/FLR50yd1c3p1I1IqUSKKKK6OTinjSDDVkscnUktHEvBaioPbvj5nbyBpOgxlzJbMZr23nEoT5k4ps9IkpthcKyRSAxDaSVJH7xG3y3/mpJZ5Em0/O40Vx16LuKUuQ7KkuSJCyt11RUtR7TVJNBqKcrStkj20CpYA7aaNQy2fwq2w46llQSVHY47gE/wAI5eO5pWbOFc8eVNFuCrnPElxI6OMhDTaB2ADAxQdQ8aI9HTEi3t3C8JyVpylCjypimW2G0kx0R2uFOOAkZ+dXsautEK0MNB9Ut5COFxuKkucB7iQMCli461tc0FvoJLCc46RSMBPialmpMtpuMdRZ1PGaXOdCY6ejRnJCaX3bYw5GKmThaRnnTNcNTRG4SoTag6tJUFOtYUFgjnmlqJcW08fSsrDRHtpIJFNBSSM6mBswwcZFeTV0lstuKIB4OIgE7fKqaoJSK9Z8a81NADtoyY3drdJ01PVlLiSqMo/sHngeXMe+lCdEdhTHor4w6ysoUPEVMCW5Bmsy2ThxlYWPHHZTV6RIjbjsO8xh+VOaHER+8AMfL6UmkupIluq9uE/P3QmUVNFOVjR6OogkalbcUOrHbU5nuPIfWse/zDPvM2T2OPKx5A4HyApm9Gx6NF5k9rUYY/qP9qSSc86ReJktPPaJvkkvUiiippyoBzp50+laYdtcba6ZS1oQ2y2R0i1FZ9wGM7nzpGHOvp/o/hMybZAeaQhDzEnpHH1KPESHB+WByxw70spYUaU4uUshhiQLpZ4k5qCiGh9Liiphxf8ApJV1gEkjKhhXMdoO4xSrYrRdpeoFLlpRl9KmyCchRUMA4JzgcyfCvsN3ENVvU7JZbcKB+2kH60n6durzaLldWYXTMMK6OOjKW0k5wTk7YFYYsyrCrHz3XllYtl7kRLayGmUJSOFO+eeCf121iWdxLLpL5bWkjHRqHOmXUl5YkXyXJdw6l7ZKmF7JHnyzvjFYVmw4+A4OtnINNd2zMpJYsjkv0UMKYcbSUNPAlCD2Y2rIr6De2UNJiO9QhDTgWlSQQUHHFzr58a0g7oyqRsyKkVFSKczDNOyMXP0aLCus5b3tu8DP2WfhSSadtEfnaZ1BGJ2LRPl1Vfaknpcl2zKClya87eok5ooopyodPR6njt+oEdqooH9K6Sqc/Rk8BeJUU8n45+IP+TSlLZMaU8woYU04pB9xxSLxMlpZbRUXQpqRUVIpyonlT/6MrlFZiXiNLfS0tLYkxwpXDxLSlQI8diNq+fmvTZwRXGrqw0JYXc/Q2qJLrmm31RSkuLQMYNK9osl4uVnQ8+toRnAeBtx8obbHLHCkb1y2PUMhFigOXBsrbdC20O9nU2wfHl7j4VYi9tsQhDQtSWHeIr3yQrOT399YKLWRXji7MUdSQY6JHq0RcJRCiVIYWpW/aST9K4bZHci3ZLKiAMAkZziqrt0IlOOxHHMBR9o5x4jzqm2ySiWXCFOOL6oB3JJrSzsYyknK9hm1TJZTBS26v8xbaujCd+1PP3ZpHI3rtubz70pfrAKVIPCEn9kd1cRpoRsjKcrs81IqKkUwoGnXQQxZb+snA6DH9KqSqdrAPUvR9eJShgyFFtPiNk/3NJPQk2zOlh5teYk0UGitCs1NMzhbr7DlKOEJcAWf4Tsfka0vSBA9S1E84kDo5SQ6kj4H5j50sg09yQdUaIbfQOO4W3ZYHNSf8pwf5TWcsnckrfTqxq8NH6CJRU4q+JCkzHUtRI7r7p5IaQVE+4U5WUAZplh6W6O3s3C7yjGZfHE0223xuLHPPYBWvbPRleHYRlXFTdvB9lDieJR88HAphuloSrTH4Y08647CTwJW4MLA5j3c8eHbXbHLq5s6LtcCdon1PgW5G9Yc4FOgcWcjfblvmk/UWkrhEU6u3vrU0FcRSpWDnfcfGnv0dz48jTiYLSA0/C/Lda7Qe/312XF5tbTjKyASN871I5tSLcCcT4HJjS3H1BxISScYzgUyadsyYYEl4pW52bez5V5vLbbN0KW1BQ4ueMVpCWltgZIHCnNNKbasZqCTFG8ttvTpj6FY4HyleBnmedc0u2yYoCnWyWz7LiN0n7e+oiuKWt4b5dPWPhnNNlvSOh6aSspitbqTnHGrsSPlW6MHqI/DUYNb8mLGlyXXSFMuLUVEIPVBO/KuP8LWchpxKjnYKHDn38q6cM0DJxzPd307avAtGlrTZUnDivzXQO/cnP8AMo/Cs3Q9p/Eb2l54D1aH+a4o8iR7I+Iz5A1w6ruv4vfJMlKssg8DQ/hHL47n30jzlYkn9SvGHCOb68DHooopysitzSV7VY7oh5W8ZzqPo55T3+Y+9YdSK41dCTgpxcZaMZ9ZWFNtlJnQcLt0rrtqRyQTvjy7qcfRvZnLUr8SXcGwqQ0AGGMKBTz3Vy+HxpU0pqBhuMuzXtIctz3VSpf+0ftnt7OdaSTO0PM/al2V5XEFJ5pJ+h2Hga5CVnZk9KpKD3NTXg+a7n1h24OpQUutl1lXNHaBis6SiBLT+SvkBlpfVI8j3edYca+t3JsOxnuJvs4TuD5dh8Pvg6CH0yUBElCFoAylSkglJz2fru8hsbnAbY7bLh+IW1/o3iMLaeGzqMctvkcVyX6VLabTcCAkJPC4hKwdvdXQ8oAjo5C2UkYUlfXbJ27/AArMfkyejV0kYraKMFTR6RCv14/DasZ0lLM2p1pRVhOlSTJlqWlO6jsBXQzarrcnOhaaWhoY6Rwj2R2eZ8K17Uu0N3VClx18BOShKSr5f/a39QX1bWY9rirDWAlC0oxxZG6tu3sHdSxh8xpKawii/Z4tpGHj2bAbqWfD7/oVylOSobeQG0N54W08h9/PwNe3Ykl91cmXlSjjJPVCR+6keX+KkpIGAOonn5Df6E1ozAx1laDxZNQtb0x1uDCQpyQ8eHhHOvUha5clEO3Nl99ZwOj33/XbTIhMTQsAuulEm9yUbJ5hsfb60rdupjWrYLRiryei/wBwKNQPs6XsKbBBcCpkhPFKdT3Hn8eQ8POkU86tlSXZT7j8hanHXFcS1q5k1TRFWO0aW7jnm3mwooopjYKKKKAJFM2nNVuW5owbg165bVjhU0rcoHhns8PpSxU5rjV9RKlONSOGSPoCbCh7N00TcBvuqKpQ28N/or410RdYuQ30Rr/b3IjqcArSk4Pjjn8M18+hzZMJ8PRH3GXRyUhWKbIeuluMiPfYLM9rkVcICvgRj6VxOUdMybDXpafMv77Mbm7pbLmB6rOZWpQ2SV8Kj55wRUPQ2AFKDWFn2loOCfAY/W1K3Boa5jIXItzh7DnA/wDIVajTdtUP+X6sCUDs6QbfBQru9XFB8VBeJNfjsMJjNJbKUspQo8+Ee15nnXA+uOwnDryG2s+0teMHurN//MMkfm6tbKR/H91VUbPo+IeObfHJSh+y2rOf+0H61zeI78XSel3+GE3UVuQkpbBfWRjCBt4bn+1VQrDe76nifAt8E7qW4MEjy5n5CrhqjT9oBFhs3E6Ng8/9cnJ+lL951LdbvxJlSiGT/st9VHvHb781xuT0DHXqZQjhXN6/ruMT97tGl464mnEpkzFDDkte4Hv7fIbedJUqS9KfW/IdU464crWo5JNVZNRXVGxrSoxp56t8WFFFFMbBRRRQAUUUUAFFFFABUiiigCRR2UUUAGKKKKGcIqKKKDoUUUUAFFFFABRRRQB//9k="
+              style="width: 30px;" />
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem routerLink="profile-detiels">My Profile</button>
+              <button ngbDropdownItem routerLink="/order">My Order</button>
+              <button ngbDropdownItem>Order Histry</button>
+              <button ngbDropdownItem (click)="logOut()">LogOut </button>
+            </div>
+          </div>
+        </ng-template>
+       <ng-template #elseBlock><div>
+       <a> <li ><i class="tf-ion-ios-person mr-3"></i></li></a>
+       
+      </div>
+    </ng-template>
+       
+    
+      
+    </ul>
+  </div>
+</nav>

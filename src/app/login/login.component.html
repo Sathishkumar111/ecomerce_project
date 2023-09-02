@@ -1,0 +1,32 @@
+<div class="account section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="login-form border p-5">
+          <div class="text-center heading">
+            <h2 class="mb-2">Login</h2>
+            <p class="lead">Don’t have an account? <a href="#">Create a free account</a></p>
+          </div>
+
+      
+            <div class="form-group mb-4">
+              <label for="#">Enter Email</label>
+              <input type="text" id="loginEmail" class="form-control" placeholder="Enter Username"
+                [(ngModel)]="LoginUser.email">
+
+            </div>
+            <div class="form-group">
+
+
+              <label for="#">Enter Password</label>
+              <input type="text" id="loginpasse" class="form-control" placeholder="Enter Password"
+                [(ngModel)]="LoginUser.password">
+            </div>
+            <button class="btn btn-dark btn-lg btn-block mt-3 btn-block" type="button" (click)="logIn()" routerLink="/home">Login</button>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

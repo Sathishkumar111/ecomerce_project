@@ -1,0 +1,106 @@
+<section class="cart shopping page-wrapper">
+    <div class="button container">
+        
+                                            
+        <button type="button" class="btn btn-black btn-small"
+              (click)="open(content)"> Add Products </button>
+    </div><br><br>
+   
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="product-list">
+                    <form class="cart-form">
+                        <table class="table shop_table shop_table_responsive cart" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th class="product-thumbnail"> </th>
+                                    <th class="product-name">Product</th>
+                                    <th class="product-price">Price</th>
+                                    <th class="product-quantity">Quantity</th>
+                                    <th class="product-quantity">Update</th>
+                                    <th class="product-remove">Remove </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr class="cart_item" *ngFor="let product of posts">
+                                    <td class="product-thumbnail" data-title="Thumbnail">
+                                        <a routerLink="/product-single"><img src="{{product.url}}"
+                                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                alt=""></a>
+                                    </td>
+
+                                    <td class="product-name" data-title="Product">
+                                        <a href="#">{{product.name}}</a>
+                                    </td>
+
+                                    <td class="product-price" data-title="Price">
+                                        <span class="amount"><span class="currencySymbol">
+                                                <pre wp-pre-tag-3=""></pre>
+                                            </span>{{product.price}}</span>
+                                    </td>
+                                    <td class="product-price" data-title="Price">
+                                        <span class="amount"><span class="currencySymbol">
+                                                <pre wp-pre-tag-3=""></pre>
+                                            </span>{{product.size}}</span>
+                                    </td>
+                                    <td class="product-subtotal" data-title="Update">
+                                        <button type="button" (click)="open(content)" (click)="editItems(product)" class="btn btn-outline-primary " ><span class="material-symbols-outlined">
+                                            edit
+                                            </span></button>
+                               
+                                    </td>
+                                    <td>
+                                        <button type="button"  class="btn btn-outline-danger " (click)="deleteItems(product.id)" ><span class="material-symbols-outlined">
+                                            delete
+                                            </span></button>
+                                       
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </form>
+                    <div class="col-12">
+                        <nav aria-label="Page navigation">
+                          <ul class="pagination">
+                            <li class="page-item">
+                              <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                              </a>
+                            </li>
+                            <li class="page-item "><a class="page-link" href="#" routerLink="/addproduct">1</a></li>
+                            <li class="page-item"><a class="page-link" href="# "  routerLink="/add-product2">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#" routerLink="/addproduct3">3</a></li>
+                            <li class="page-item">
+                              <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Add Product</h4>
+       
+    </div>
+    <div class="modal-body">
+        <input type="text" class="form-control" placeholder="Image Url" [(ngModel)]="items.url" ><br>
+        <input type="text" class="form-control" placeholder="Description"[(ngModel)]="items.name"><br>
+        <input type="text" class="form-control" placeholder="size"[(ngModel)]="items.size"><br>
+        <input type="text" class="form-control" placeholder="price"[(ngModel)]="items.price"><br>
+        
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="update()"  >Save</button>
+    </div>
+    
+</ng-template>
